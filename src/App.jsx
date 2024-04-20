@@ -2,34 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import MyCard from './components/MyCard'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Tags from './components/Tags'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className="header">
+        <Header />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="contenedor-principal">
+        <MyCard nombrePerro={'Yack'} src="https://cdn.pixabay.com/photo/2023/04/12/14/45/ai-generated-7920554_1280.jpg" descripcionCard={'Lleno de energía y listo para jugar. ¡Dale a Yack el hogar amoroso que se merece!'} />
+        <MyCard nombrePerro={'Guardian'} src="https://cdn.pixabay.com/photo/2023/12/13/00/43/ai-generated-8446134_1280.jpg" descripcionCard={'Es juguetón, amigable y se lleva bien con mis niños y otros animales. ¡Haz de Guardian parte de tu familia hoy mismo '}/>
+        <MyCard nombrePerro={'Max'} src="https://cdn.pixabay.com/photo/2024/03/08/18/01/ai-generated-8621330_1280.jpg" descripcionCard={'Un perro de tamaño grande con un corazón gigante. Hazte amigo de Max y experimenta un amor incondicional'}/>
+        <MyCard nombrePerro={'Tobi'} src="https://cdn.pixabay.com/photo/2023/04/02/17/26/animal-7895031_1280.jpg"descripcionCard={' Es un compañero leal y cariñoso que adora salir al bosque en la nieve ¡Ayuda a Tobi a encontrar una familia!'} />
+      
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
 export default App
