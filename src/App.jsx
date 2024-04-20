@@ -7,6 +7,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Tags from './components/Tags'
 import Badge from 'react-bootstrap/Badge';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
